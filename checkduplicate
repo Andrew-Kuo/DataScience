@@ -1,0 +1,21 @@
+fname = raw_input("Enter file name: ")
+
+if len(fname) == 0:
+    fname = "romeo.txt"
+
+fh = open(fname)
+addonlist = list()
+for line in fh:
+    word = line.rstrip().split()
+    for checkduplicate in word: 
+        if checkduplicate in addonlist: continue 
+        else: addonlist.append(checkduplicate)
+        
+	
+addonlist.sort()    
+print addonlist
+
+    
+
+    
+#print addonlist
